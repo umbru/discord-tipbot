@@ -16,8 +16,10 @@ class Deposit(commands.Cog):
     async def deposit(self, ctx):
         client = AuthServiceProxy(rpc_connection)
         user_id = str(ctx.author.id)
+        user_name = ctx.author.name
 
         if not user_db.check_user(user_id):
+            user_db.add_user(user_id, user_name)
             embed = discord.Embed(
                 title="**How may I be of service?**",
                 color=0x7152b6)
