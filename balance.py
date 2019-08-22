@@ -49,8 +49,8 @@ class Balance(commands.Cog):
                 name=user_name,
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
-                name="{0} UMBRU".format(str(balance)),
-                value="Unconfirmed: {0} UMBRU".format(str(unconfirmed_balance)))
+                name="{0:.8f} UMBRU".format(str(balance)),
+                value="Unconfirmed: {0:.8f} UMBRU".format(str(unconfirmed_balance)))
             embed.set_footer(text="Umbru v{0}".format(config.VERSION),icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
