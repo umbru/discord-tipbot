@@ -92,7 +92,7 @@ class Tip(commands.Cog):
                         embed.add_field(
                             name="Invalid User. Please check **!help** for information.",
                             value="`{0}`".format(str(mention)))
-                       embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                        embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
                     elif tipfrom == tipto:
