@@ -21,7 +21,7 @@ class Withdrawall(commands.Cog):
         if not user_db.check_user(user_id):
             embed = discord.Embed(
                 title="**How may I be of service?**",
-                color=0x0043ff)
+                color=0x7152b6)
             embed.set_author(
                 name=ctx.author.display_name,
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
@@ -29,7 +29,7 @@ class Withdrawall(commands.Cog):
                 name="To see all my available commands type `!help`",
                 value="If you have any issues please let one of the team know.")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
         else:
@@ -46,7 +46,7 @@ class Withdrawall(commands.Cog):
                 embed.add_field(
                     name="No address specified. Please check **!help** for information.",
                     value=" :warning: :warning: :warning: ")
-                embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                 await ctx.channel.send(embed=embed)
             else:
@@ -59,8 +59,8 @@ class Withdrawall(commands.Cog):
                         icon_url=ctx.author.avatar_url_as(format='png', size=256))
                     embed.add_field(
                         name="Invalid amount (must be at least 0.1 UMBRU).",
-                        value="Your Balances : **{0} UMBRU**".format(client.getbalance(account, config.CONFIRM)))
-                    embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                        value="Your Balances: **{0:.6f} UMBRU**".format(client.getbalance(account, config.CONFIRM)))
+                    embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                     await ctx.channel.send(embed=embed)
                 else:
@@ -75,7 +75,7 @@ class Withdrawall(commands.Cog):
                         embed.add_field(
                             name="Invalid Umbru address, please check.",
                             value="`{0}`".format(str(address)))
-                        embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                        embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
                     else:
@@ -89,14 +89,14 @@ class Withdrawall(commands.Cog):
                         embed = discord.Embed(
                             title="**Block Explorer**",
                             url='https://explorer.umbru.io/insight/tx/{0}'.format(txid),
-                            color=0x0043ff)
+                            color=0x7152b6)
                         embed.set_author(
                             name=ctx.author.display_name,
                             icon_url=ctx.author.avatar_url_as(format='png', size=256))
                         embed.add_field(
-                            name="Withdrawal Complete: `{0} UMBRU`\nWithdrawal Fee: `{1} SUGAR`\nClick above link to check on the block explorer.".format(amount, str(config.FEE)),
-                            value="Your Balances: `{0} UMBRU`".format(client.getbalance(account, config.CONFIRM)))
-                        embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                            name="Withdrawal Complete: `{0} UMBRU`\nWithdrawal Fee: `{1} UMBRU`\nClick above link to check on the block explorer.".format(amount, str(config.FEE)),
+                            value="Your Balances: `{0:.6f} UMBRU`".format(client.getbalance(account, config.CONFIRM)))
+                        embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
 

@@ -20,7 +20,7 @@ class Info(commands.Cog):
         if not user_db.check_user(user_id):
             embed = discord.Embed(
                 title="**How may I be of service?**",
-                color=0x0043ff)
+                color=0x7152b6)
             embed.set_author(
                 name=ctx.author.display_name,
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
@@ -28,7 +28,7 @@ class Info(commands.Cog):
                 name="To see all my available commands type `!help`",
                 value="If you have any issues please let one of the team know.")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
         else:
@@ -42,7 +42,7 @@ class Info(commands.Cog):
 
             embed = discord.Embed(
                 title="**Umbru Network Information**",
-                color=0x0043ff)
+                color=0x7152b6)
             embed.set_author(
                 name=ctx.author.display_name,
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
@@ -61,7 +61,10 @@ class Info(commands.Cog):
             embed.add_field(
                 name="**Wallet Version:**",
                 value="`{0}`".format(client_version))
-            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.add_field(
+                name="**Explorer:**",
+                value="<https://explorer.umbru.io>")
+            embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
 

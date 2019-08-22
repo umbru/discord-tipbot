@@ -19,7 +19,7 @@ class Help(commands.Cog):
 
             embed = discord.Embed(
                 title="**Umbru Bot Command List:**",
-                color=0x0043ff)
+                color=0x7152b6)
             embed.set_author(
                 name=ctx.author.display_name,
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
@@ -52,7 +52,7 @@ class Help(commands.Cog):
                 value="Withdraw all Umbru from your wallet. [!withdrawall ADDRESS]",
                 inline=True)
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
         else:
@@ -60,13 +60,13 @@ class Help(commands.Cog):
 
             embed = discord.Embed(
                 title="**Umbru Bot Command List:**",
-                color=0x0043ff)
+                color=0x7152b6)
             embed.set_author(
                 name=ctx.author.display_name,
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="**!help**",
-                value="This is the command you have just used :wink:",
+                value="This is the command you have just used.",
                 inline=True)
             embed.add_field(
                 name="**!info**",
@@ -93,7 +93,7 @@ class Help(commands.Cog):
                 value="Withdraw all Umbru from your wallet. [!withdrawall ADDRESS]",
                 inline=True)
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
 
