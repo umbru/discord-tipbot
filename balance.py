@@ -30,8 +30,7 @@ class Balance(commands.Cog):
                 name="To see all my available commands type `!help`",
                 value="If you have any issues please let one of the team know.")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="Umbru v{0}".format(config.VERSION),icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
         else:
@@ -52,8 +51,7 @@ class Balance(commands.Cog):
             embed.add_field(
                 name="{0} UMBRU".format(str(balance)),
                 value="Unconfirmed: {0} UMBRU".format(str(unconfirmed_balance)))
-            embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="Umbru v{0}".format(config.VERSION),icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
 

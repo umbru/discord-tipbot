@@ -29,8 +29,7 @@ class Withdrawall(commands.Cog):
                 name="To see all my available commands type `!help`",
                 value="If you have any issues please let one of the team know.")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
         else:
@@ -47,8 +46,7 @@ class Withdrawall(commands.Cog):
                 embed.add_field(
                     name="No address specified. Please check **!help** for information.",
                     value=" :warning: :warning: :warning: ")
-                embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                 await ctx.channel.send(embed=embed)
             else:
@@ -62,8 +60,7 @@ class Withdrawall(commands.Cog):
                     embed.add_field(
                         name="Invalid amount (must be at least 0.1 UMBRU).",
                         value="Your Balances : **{0} UMBRU**".format(client.getbalance(account, config.CONFIRM)))
-                    embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                    embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                     await ctx.channel.send(embed=embed)
                 else:
@@ -78,8 +75,7 @@ class Withdrawall(commands.Cog):
                         embed.add_field(
                             name="Invalid Umbru address, please check.",
                             value="`{0}`".format(str(address)))
-                        embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                        embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
                     else:
@@ -100,8 +96,7 @@ class Withdrawall(commands.Cog):
                         embed.add_field(
                             name="Withdrawal Complete: `{0} UMBRU`\nWithdrawal Fee: `{1} SUGAR`\nClick above link to check on the block explorer.".format(amount, str(config.FEE)),
                             value="Your Balances: `{0} UMBRU`".format(client.getbalance(account, config.CONFIRM)))
-                        embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                        embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
 

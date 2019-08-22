@@ -52,8 +52,7 @@ class Help(commands.Cog):
                 value="Withdraw all Umbru from your wallet. [!withdrawall ADDRESS]",
                 inline=True)
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
         else:
@@ -94,8 +93,7 @@ class Help(commands.Cog):
                 value="Withdraw all Umbru from your wallet. [!withdrawall ADDRESS]",
                 inline=True)
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
 

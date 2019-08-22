@@ -36,8 +36,7 @@ class Tip(commands.Cog):
                 name="To see all my available commands type `!help`",
                 value="If you have any issues please let one of the team know.")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
         else:
@@ -63,8 +62,7 @@ class Tip(commands.Cog):
                 embed.add_field(
                     name="Invalid tip amount. Please check **!help** for information.",
                     value="`{0}`".format(amount))
-                embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                 await ctx.channel.send(embed=embed)
             else:
@@ -82,8 +80,7 @@ class Tip(commands.Cog):
                     embed.add_field(
                         name="Tip amount must be atleast 0.01 UMBRU",
                         value="`{0}`".format(amount))
-                    embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                    embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                     await ctx.channel.send(embed=embed)
                 else:
@@ -95,8 +92,7 @@ class Tip(commands.Cog):
                         embed.add_field(
                             name="Invalid User. Please check **!help** for information.",
                             value="`{0}`".format(str(mention)))
-                       embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                       embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
                     elif tipfrom == tipto:
@@ -107,8 +103,7 @@ class Tip(commands.Cog):
                         embed.add_field(
                             name="Sorry you cannot tip yourself!",
                             value=" :wink: ")
-                        embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                        embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
                     elif amount > client.getbalance(tipfrom, config.CONFIRM):
@@ -119,8 +114,7 @@ class Tip(commands.Cog):
                         embed.add_field(
                             name="Sorry you do not have enough UMBRU for that.",
                             value="Your balance is: **{0} UMBRU**".format(client.getbalance(tipfrom, config.CONFIRM)))
-                        embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                        embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
                     else:
@@ -135,8 +129,7 @@ class Tip(commands.Cog):
                                 embed.add_field(
                                     name="Invalid tip amount. Please check **!help** for information.",
                                     value="`{0}`".format(amount))
-                                embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                                    icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                                embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                                 await ctx.channel.send(embed=embed)
                             if move_istrue:
@@ -147,8 +140,7 @@ class Tip(commands.Cog):
                                 embed.add_field(
                                     name="Thank you for the donation!",
                                     value="**{0} UMBRU**".format(amount))
-                                embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                                    icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                                embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                                 await ctx.channel.send(embed=embed)
                         else:
@@ -162,8 +154,7 @@ class Tip(commands.Cog):
                                 embed.add_field(
                                     name="Invalid tip amount. Please check **!help** for information.",
                                     value="`{0}`".format(amount))
-                                embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                                    icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                                embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                                 await ctx.channel.send(embed=embed)
                             if move_istrue:
@@ -176,8 +167,7 @@ class Tip(commands.Cog):
                                                                                 self.bot.get_user(int(tipto)).display_name,
                                                                                 amount),
                                     value=" :umbru:")
-                                embed.set_footer(text="Umbru v{0}]".format(config.VERSION),
-                                    icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+                                embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                                 await ctx.channel.send(embed=embed)
 
