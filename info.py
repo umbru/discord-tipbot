@@ -48,24 +48,19 @@ class Info(commands.Cog):
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="**Current Block Height:**",
-                value="`{0}`".format(block),
-                inline=True)
+                value="`{0}`".format(block))
             embed.add_field(
                 name="**Network Hash Rate:**",
-                value="`{0} GH/s`".format(hash_rate),
-                inline=True)
+                value="`{0} GH/s`".format(hash_rate))
             embed.add_field(
                 name="**Difficulty:**",
-                value="`{0}`".format(difficulty),
-                inline=True)
+                value="`{0}`".format(difficulty))
             embed.add_field(
                 name="**Connections:**",
-                value="`{0}`".format(connection),
-                inline=True)
+                value="`{0}`".format(connection))
             embed.add_field(
                 name="**Wallet Version:**",
-                value="`{0}`".format(client_version),
-                inline=True)
+                value="`{0}`".format(client_version))
             embed.set_footer(text="Umbru v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
